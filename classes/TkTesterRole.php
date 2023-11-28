@@ -5,7 +5,7 @@ class TkTesterRole {
     public function init() {
         add_action('after_setup_theme', array($this, 'tkRemoveAdminBarForTesters'));
         add_action('admin_init', array($this, 'tkRestrictAdminAccessForTesters'));
-        register_activation_hook(__FILE__, array($this, 'tkAddTesterRole'));
+        register_activation_hook('', array($this, 'tkAddTesterRole'));
         register_deactivation_hook(__FILE__, array($this, 'tkRemoveTesterRole'));
     }
 

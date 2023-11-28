@@ -2,7 +2,7 @@
 /*
 Plugin Name: TKT Staging Environment Toolkit
 Plugin URI:  https://www.thekey.technology
-Version: 1.0
+Version: 2.0
 Description: Handles redirections, role management, and robots.txt modifications in a staging environment.
 Author:      Mohamed Audi, the key technology
 Author URI:  https://www.thekey.technology
@@ -23,6 +23,8 @@ require_once "classes/TkStagingEnvironmentToolkit.php";
 $stagingEnvironmentToolkit = new TkStagingEnvironmentToolkit();
 $stagingEnvironmentToolkit->init();
 
+register_activation_hook(__FILE__, array('TkTesterRole', 'tkAddTesterRole'));
+register_deactivation_hook(__FILE__, array('TkTesterRole', 'tkRemoveTesterRole'));
 
 require 'plugin-update-checker-4.11/plugin-update-checker.php';
 $updateChecker = Puc_v4_Factory::buildUpdateChecker(
