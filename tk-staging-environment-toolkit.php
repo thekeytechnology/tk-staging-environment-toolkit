@@ -2,7 +2,7 @@
 /*
 Plugin Name: TKT Staging Environment Toolkit
 Plugin URI:  https://www.thekey.technology
-Version: 3
+Version:     4
 Description: Handles redirections, role management, and robots.txt modifications in a staging environment.
 Author:      Mohamed Audi, the key technology
 Author URI:  https://www.thekey.technology
@@ -34,7 +34,7 @@ register_deactivation_hook(__FILE__, array($tkRobots, 'additionalDeactivationTas
 
 require 'plugin-update-checker-4.11/plugin-update-checker.php';
 $updateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/thekeytechnology/tk-staging-environment-toolkit.git',
+    'https://github.com/thekeytechnology/tk-staging-environment-toolkit',
     __FILE__,
     'tk-staging-environment-toolkit'
 );
