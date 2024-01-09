@@ -18,6 +18,10 @@ class TkRobots {
         }
     }
 
+    public function additionalDeactivationTask() {
+        update_option('blog_public', '1');
+    }
+
     /**
      * Modifies robots.txt rules if 'staging' is in the URL.
      *
@@ -31,4 +35,6 @@ class TkRobots {
         }
         return $robots;
     }
+
+
 }
