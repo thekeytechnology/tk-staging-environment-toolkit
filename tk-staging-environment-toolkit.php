@@ -2,7 +2,7 @@
 /*
 Plugin Name: TKT Staging Environment Toolkit
 Plugin URI:  https://www.thekey.technology
-Version: 2.1
+Version: 3
 Description: Handles redirections, role management, and robots.txt modifications in a staging environment.
 Author:      Mohamed Audi, the key technology
 Author URI:  https://www.thekey.technology
